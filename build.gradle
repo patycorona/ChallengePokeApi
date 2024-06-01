@@ -46,12 +46,11 @@ ext{
     glideVersion = "4.14.2"
 
     //firebase
-    firebase = "33.1.0"
-    firebaseAuth = "23.0.0"
+    firebaseBom = "33.1.0"
+    firebaseAuth = "8.0.2"
 
     //airbnb  lottie
     airbnbLottieVersion = "3.1.0"
-
 
     //For instrumentation tests
     jUnit = "4.13.2"

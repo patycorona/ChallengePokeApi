@@ -1,3 +1,12 @@
 <resources>
-    <string name="app_name">ChallengePokeApi</string>
+    <string name="app_name">Challenge PokeApi</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tv_login_title">PokeApi</string>
+    <string name="hint_email">E-mail:</string>
+    <string name="hint_password">Password:</string>
+    <string name="text_enter">Iniciar Sesión</string>
+    <string name="msg_error">An error ocurred</string>
+    <string name="msg_your_welcome">BIENVENIDO A TU APP FAVORITA</string>
+    <string name="msg_empty_field">ingrese sus datos para continuar</string>
 </resources>

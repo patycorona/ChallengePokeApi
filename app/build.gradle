@@ -86,8 +86,9 @@ dependencies {
     implementation "com.github.bumptech.glide:glide:$glideVersion"
 
     //firebase
-    implementation(platform("com.google.firebase:firebase-bom:$firebase"))
+    implementation(platform("com.google.firebase:firebase-bom:$firebaseBom"))
     implementation "com.google.firebase:firebase-analytics"
+    implementation "com.firebaseui:firebase-ui-auth:$firebaseAuth"
     implementation "com.google.firebase:firebase-auth-ktx:"
 
     //airbnb

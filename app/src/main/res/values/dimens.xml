@@ -1,4 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="elevation_2dp">2dp</dimen>
+    <dimen name="elevation_4dp">4dp</dimen>
+
+    <dimen name="space_0dp">0dp</dimen>
+    <dimen name="space_10dp">10dp</dimen>
+    <dimen name="space_16dp">16dp</dimen>
+    <dimen name="space_25dp">25dp</dimen>
+    <dimen name="space_40dp">40dp</dimen>
+    <dimen name="space_80dp">80dp</dimen>
+    <dimen name="space_250dp">250dp</dimen>
+
+    <dimen name="text_size_16sp">16sp</dimen>
+    <dimen name="text_size_18sp">18sp</dimen>
+    <dimen name="text_size_35sp">35sp</dimen>
+
 </resources>

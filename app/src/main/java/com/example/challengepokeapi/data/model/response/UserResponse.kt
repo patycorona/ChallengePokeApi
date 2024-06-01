@@ -1,0 +1,7 @@
+package com.example.challengepokeapi.data.model.response
+
+data class UserResponse(
+    val code: String = "",
+    val message: String = "",
+    val isSuccess:Boolean = false
+)
