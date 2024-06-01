@@ -1,0 +1,64 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+plugins {
+
+    id 'com.android.application' version '8.0.2' apply false
+    id 'com.android.library' version '8.0.2' apply false
+    id 'org.jetbrains.kotlin.android' version '1.9.0' apply false
+    id 'com.google.dagger.hilt.android' version "2.48.1" apply false
+    id 'com.google.gms.google-services' version "4.4.2" apply false
+}
+
+ext{
+    //Support Libraries
+    coreKtx= '1.9.0'
+    appCompatVersion = '1.6.1'
+    materialVersion = '1.11.0'
+    constraintLayoutVersion = '2.1.4'
+    drawerlayout  = '1.2.0'
+    fragmentktx = '1.6.2'
+    supportVersion = '1.0.0'
+    recyclerview = '1.3.2'
+
+    //dagger hilt
+    daggerHilt = '2.48.1'
+    servicesMaps = "18.2.0"
+
+    //lifecycle components
+    lifeExtensions = '2.2.0'
+    lifeVersion = '2.7.0'
+
+    //ViewModel
+    viewModelVersion = '2.7.0'
+
+    //Rxjava
+    rxj2rxjava = '2.2.6'
+    rxj2rxandroid = '2.1.1'
+    rxrelay2 ="2.1.0"
+    rxKotlin ="2.3.0"
+    GsonVersion ="2.1.0"
+
+    //Network y retro
+    retrofitVersion ="2.6.1"
+    rxJava2Adapter ="1.0.0"
+    loginInterceptor = "3.9.0"
+
+    //Glide
+    glideVersion = "4.14.2"
+
+    //firebase
+    firebase = "33.1.0"
+    firebaseAuth = "23.0.0"
+
+    //airbnb  lottie
+    airbnbLottieVersion = "3.1.0"
+
+
+    //For instrumentation tests
+    jUnit = "4.13.2"
+    extJUnit = "1.1.5"
+    expressoCore= "3.5.1"
+    assertJVersion = "3.8.0"
+    mockitoCore = "3.10.0"
+    mockitokotlin2Version ="2.2.0"
+    mockitoInLine= "2.8.47"
+}

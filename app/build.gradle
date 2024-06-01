@@ -1,0 +1,106 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'kotlin-android'
+    id 'dagger.hilt.android.plugin'
+    id 'kotlin-parcelize'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    namespace 'com.example.challengepokeapi'
+    compileSdk 34
+
+    buildFeatures {
+        viewBinding = true
+    }
+
+    defaultConfig {
+        applicationId "com.example.challengepokeapi"
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    kapt {
+        correctErrorTypes = true
+    }
+}
+
+dependencies {
+
+    implementation "androidx.core:core-ktx:$coreKtx"
+    implementation "androidx.appcompat:appcompat:$appCompatVersion"
+    implementation "com.google.android.material:material:$materialVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
+    implementation "androidx.drawerlayout:drawerlayout:$drawerlayout"
+    implementation "androidx.fragment:fragment-ktx:$fragmentktx"
+
+    implementation "androidx.cardview:cardview:$supportVersion"
+    implementation "androidx.recyclerview:recyclerview:$recyclerview"
+
+    // lifecycle components
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifeExtensions"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifeVersion"
+
+    // ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$viewModelVersion"
+
+    //dagger hilt
+    implementation "com.google.dagger:hilt-android:$daggerHilt"
+    implementation "com.google.android.gms:play-services-maps:$servicesMaps"
+    kapt "com.google.dagger:hilt-compiler:$daggerHilt"
+
+    //Rxjava
+    implementation "io.reactivex.rxjava2:rxjava:$rxj2rxjava"
+    implementation "io.reactivex.rxjava2:rxandroid:$rxj2rxandroid"
+    implementation "com.jakewharton.rxrelay2:rxrelay:$rxrelay2"
+    implementation "io.reactivex.rxjava2:rxkotlin:$rxKotlin"
+
+    //Network y Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:$rxJava2Adapter"
+    implementation "com.squareup.okhttp3:logging-interceptor:$loginInterceptor"
+    implementation "com.google.code.gson:gson:$GsonVersion"
+
+    //Glide
+    implementation "com.github.bumptech.glide:glide:$glideVersion"
+
+    //firebase
+    implementation(platform("com.google.firebase:firebase-bom:$firebase"))
+    implementation "com.google.firebase:firebase-analytics"
+    implementation "com.google.firebase:firebase-auth-ktx:"
+
+    //airbnb
+    implementation ("com.airbnb.android:lottie:$airbnbLottieVersion")
+
+    // Test
+    testImplementation "junit:junit:$jUnit"
+    androidTestImplementation "androidx.test.ext:junit:$extJUnit"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$expressoCore"
+
+    testImplementation "org.assertj:assertj-core:$assertJVersion"
+    testImplementation "org.mockito:mockito-core:$mockitoCore"
+    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:$mockitokotlin2Version"
+    testImplementation "androidx.arch.core:core-testing:$mockitokotlin2Version"
+    testImplementation("org.mockito:mockito-inline:$mockitoInLine")
+}
