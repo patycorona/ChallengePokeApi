@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:Tools="http://schemas.android.com/tools"
+    android:layout_margin="@dimen/space_8dp"
+    android:id="@+id/layout_item_poke"
+    android:layout_width="@dimen/space_160dp"
+    android:layout_height="@dimen/space_180dp"
+    style="@style/CardView"
+    android:elevation="@dimen/elevation_15dp"
+    app:cardCornerRadius="@dimen/space_8dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="@dimen/space_120dp"
+        android:layout_height="@dimen/space_120dp"
+        android:background="@color/white"
+        android:padding="@dimen/space_4dp"
+        android:id="@+id/layout_item_dish"
+        android:layout_gravity="center_horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <ImageView
+            android:id="@+id/image_poke"
+            android:layout_width="@dimen/space_120dp"
+            android:layout_height="@dimen/space_120dp"
+            android:layout_marginTop="@dimen/space_16dp"
+            android:layout_marginStart="@dimen/space_25dp"
+            android:layout_marginEnd="@dimen/space_25dp"
+            Tools:src="@drawable/img_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+        <TextView
+            android:id="@+id/tv_name_poke"
+            android:layout_width="@dimen/space_120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/space_10dp"
+            android:layout_marginStart="@dimen/space_25dp"
+            android:layout_marginEnd="@dimen/space_25dp"
+            android:padding="@dimen/space_4dp"
+            Tools:text="@string/msg_empty_field"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/text_size_16sp"
+            android:maxLines="@integer/lines_2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_poke"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
