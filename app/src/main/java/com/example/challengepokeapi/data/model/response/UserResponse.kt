@@ -1,4 +1,4 @@
-package com.example.challengepokeapi.data.model.response.homeresponse
+package com.example.challengepokeapi.data.model.response
 
 data class UserResponse(
     val code: String = "",

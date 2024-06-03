@@ -1,4 +1,4 @@
-package com.example.challengepokeapi.data.model.response.homeresponse
+package com.example.challengepokeapi.data.model.response
 
 import com.google.gson.annotations.SerializedName
 

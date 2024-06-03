@@ -7,15 +7,15 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.example.challengepokeapi.R
 import com.example.challengepokeapi.databinding.FragmentHomeItemPokemonBinding
+import com.example.challengepokeapi.domain.model.ConstantGeneral.Companion.PNG
 import com.example.challengepokeapi.domain.model.PokemonModel
 
-class HomeAllPokeAdapter (
+class HomeAllPokemonAdapter (
     private val dataSource: MutableList<PokemonModel>,
     private var onClickListener: ((pokeModel: PokemonModel) -> Unit),
     val context: Context
-) : RecyclerView.Adapter<HomeAllPokeAdapter.ViewHolder>() {
+) : RecyclerView.Adapter<HomeAllPokemonAdapter.ViewHolder>() {
 
     inner class ViewHolder(
         private var binding: FragmentHomeItemPokemonBinding,
@@ -26,15 +26,15 @@ class HomeAllPokeAdapter (
         var root: ConstraintLayout = binding.layoutItemPokemon
 
         fun bind(dataSource: PokemonModel){
+
+            binding?.idPokemon?.text = dataSource.idPokemon
             binding?.tvNamePoke?.text = dataSource.name
             Glide.with(context)
-                .load(dataSource.url)
+                .load(dataSource.urlImage + dataSource.idPokemon + PNG)
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(binding!!.imagePoke)
 
             binding.layoutItemPokemon.setOnClickListener {
-                binding.layoutItemPokemon.setBackgroundColor(ctx.getColor(R.color.white))
-
                 onListHitItemClickListener.invoke(dataSource)
             }
         }

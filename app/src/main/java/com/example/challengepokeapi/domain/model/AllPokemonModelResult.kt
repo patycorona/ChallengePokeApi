@@ -1,4 +1,5 @@
-package com.example.challengepokeapi.domain.model.homemodel
+package com.example.challengepokeapi.domain.model
+
 
 class AllPokemonModelResult(
     val count: Int = 0,

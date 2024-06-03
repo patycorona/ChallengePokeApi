@@ -13,6 +13,8 @@ import com.example.challengepokeapi.databinding.FragmentLoginBinding
 import com.example.challengepokeapi.domain.model.ConstantGeneral
 import com.example.challengepokeapi.domain.model.ResultModel
 import com.example.challengepokeapi.domain.model.UserModel
+import com.example.challengepokeapi.ui.MainActivity
+import com.example.challengepokeapi.ui.component.Screen
 import com.example.challengepokeapi.ui.login.viewmodel.FbAuthViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -41,10 +43,9 @@ class LoginFragment : Fragment() {
 
     private var authResultObserver  = Observer<ResultModel> { resultModel ->
         if (resultModel.code == ConstantGeneral.CODE) {
-            Toast.makeText(
-                requireContext(), R.string.msg_your_welcome,
-                Toast.LENGTH_SHORT
-            ).show()
+
+            (activity as MainActivity)
+                .changeScreen(Screen.HomeFragment)
 
         } else {
             Toast.makeText(

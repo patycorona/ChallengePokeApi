@@ -2,17 +2,29 @@
 <resources>
     <dimen name="elevation_2dp">2dp</dimen>
     <dimen name="elevation_4dp">4dp</dimen>
+    <dimen name="elevation_15dp">15dp</dimen>
 
     <dimen name="space_0dp">0dp</dimen>
+    <dimen name="space_4dp">4dp</dimen>
+    <dimen name="space_8dp">8dp</dimen>
     <dimen name="space_10dp">10dp</dimen>
     <dimen name="space_16dp">16dp</dimen>
+    <dimen name="space_20dp">20dp</dimen>
     <dimen name="space_25dp">25dp</dimen>
+    <dimen name="space_32dp">32dp</dimen>
     <dimen name="space_40dp">40dp</dimen>
+    <dimen name="space_60dp">60dp</dimen>
     <dimen name="space_80dp">80dp</dimen>
+    <dimen name="space_120dp">120dp</dimen>
+    <dimen name="space_160dp">160dp</dimen>
+    <dimen name="space_180dp">180dp</dimen>
+    <dimen name="space_220dp">220dp</dimen>
     <dimen name="space_250dp">250dp</dimen>
+    <dimen name="modal_height">750dp</dimen>
 
     <dimen name="text_size_16sp">16sp</dimen>
     <dimen name="text_size_18sp">18sp</dimen>
+    <dimen name="text_size_25sp">25sp</dimen>
     <dimen name="text_size_35sp">35sp</dimen>
 
 </resources>

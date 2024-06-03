@@ -1,18 +1,23 @@
 package com.example.challengepokeapi.data.model.mapping
 
 import com.example.challengepokeapi.data.model.response.AllPokemonResponse
+import com.example.challengepokeapi.domain.model.ConstantGeneral.Companion.URL_IMAGE
 import com.example.challengepokeapi.domain.model.PokemonModel
+import com.example.challengepokeapi.ui.component.removeUrl
 
 internal fun AllPokemonResponse.toModel() : MutableList<PokemonModel>{
-    val list: MutableList<PokemonModel> = mutableListOf()
+    var list: MutableList<PokemonModel> = mutableListOf()
 
-    list_poke.map{ PK ->
+    pokemon.map{ PK ->
         list.add(
             PokemonModel(
                 name = PK.name,
-                url = PK.url
+                url = PK.url,
+                idPokemon = PK.url.removeUrl().toString(),
+                urlImage = URL_IMAGE
             )
         )
     }
     return list
 }
+

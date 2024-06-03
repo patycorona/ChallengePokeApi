@@ -2,12 +2,12 @@ package com.example.challengepokeapi.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.example.challengepokeapi.R
 import com.example.challengepokeapi.databinding.ActivityMainBinding
 import com.example.challengepokeapi.ui.component.Screen
+import com.example.challengepokeapi.ui.home.views.HomeFragment
 import com.example.challengepokeapi.ui.login.views.LoginFragment
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -20,7 +20,13 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        initlistener()
         changeScreen(Screen.LoginFragment)
+    }
+    private fun initlistener(){
+        binding?.signOut?.setOnClickListener {
+            finish()
+        }
     }
 
     private fun changeFragment(fragment: Fragment) {
@@ -35,11 +41,10 @@ class MainActivity : AppCompatActivity() {
 
             when (typeScreen) {
                 Screen.LoginFragment -> {
-                    lblTitle.visibility = View.GONE
                     openLoginFragment()
                 }
-                Screen.MainActivity -> {
-                    //initListener()
+                Screen.HomeFragment -> {
+                    openHomeFragment()
                 }
 
                 else -> {
@@ -51,6 +56,10 @@ class MainActivity : AppCompatActivity() {
 
     private fun openLoginFragment() {
         changeFragment(LoginFragment.newInstance())
+    }
+
+    private fun openHomeFragment(){
+        changeFragment(HomeFragment.newInstance())
     }
 
 }

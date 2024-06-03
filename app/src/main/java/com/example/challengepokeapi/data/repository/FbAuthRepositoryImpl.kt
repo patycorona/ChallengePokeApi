@@ -8,7 +8,7 @@ import io.reactivex.Single
 import javax.inject.Inject
 
 class FbAuthRepositoryImpl @Inject constructor(
-    var firebaseAction: FirebaseAction
+    private var firebaseAction: FirebaseAction
 ):FbAuthRepository {
 
     override fun authFireBase (userRequest: UserRequest): Single<ResultModel> =

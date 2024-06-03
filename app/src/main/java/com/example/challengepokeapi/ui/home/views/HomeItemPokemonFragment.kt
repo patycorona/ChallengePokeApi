@@ -5,13 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.challengepokeapi.databinding.FragmentItemPokeBinding
+import com.example.challengepokeapi.databinding.FragmentHomeItemPokemonBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class ItemPokeFragment : Fragment() {
+class HomeItemPokemonFragment : Fragment() {
 
-    private var binding :FragmentItemPokeBinding? = null
+    private var binding : FragmentHomeItemPokemonBinding? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,7 +22,7 @@ class ItemPokeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        binding = FragmentItemPokeBinding.inflate(LayoutInflater.from(context), null, false)
+        binding = FragmentHomeItemPokemonBinding.inflate(LayoutInflater.from(context), null, false)
         return binding?.root
     }
 
@@ -30,7 +30,7 @@ class ItemPokeFragment : Fragment() {
 
         @JvmStatic
         fun newInstance() =
-            ItemPokeFragment().apply {
+            HomeItemPokemonFragment().apply {
             }
     }
 }
