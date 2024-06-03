@@ -6,7 +6,7 @@ Al seleccionar un pokemón nos muestra más a detalle algunas de sus caracterís
 ChallengePokeApi se realizó trabajando con los siguientes teconologías:<br>
 Android studio API 34, JVM versión 1.8, Arquitectura Clean, servicios REST por Retrofit,<br>
 Firebase Authentication, programación Android nativo con kotlin, Rx java Inyección de dependencia, <br>
-Principios de SOLID(Single Responsibility,Dependency Inversion),Imagenes con Glade.<br> 
+Principios de SOLID(Single Responsibility,Dependency Inversion),Imagenes con Glade, pruebas unitarias.<br> 
 
 
 ![Diagrama](https://github.com/patycorona/ChallengePokeApi/assets/65816817/8809ca4f-be7d-4232-84b9-dacc1eb2a24c)
